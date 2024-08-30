@@ -1,29 +1,35 @@
-# [CAMDEN CURLING CLUB](https://camden-curling-club-286959c89917.herokuapp.com)
+# [London Outdoor Sculpture](https://herokuapp.com)
 
 ## Project Purpose
 
-The purpose of this project is to create a members' hub for the fictional Camden Curling Club where members can book practice sessions and engage with club activities.
+The purpose of this project is to create a photo-sharing website for images of outdoor sculpture across the Greater London area.
 
-New users will be able to register for membership and members will be able to book practice sessions, read FAQs, upload images to a gallery and access a curling club network.
+Once registered, users will be able to post images, like and comment upon posts, follow other users and sign-up for online events.
 
-The site administrator will be able to monitor and modify all aspects of the site including member access and bookings, approving gallery images and adding content to the FAQs and curling club network.
+The site administrator will be able to monitor and modify all aspects of the site including the deletion of posts, comments and users if necessary.
+
 
 ## Target Audience
 
-The target audience is existing and potential members of the Camden Curling Club.
+There are two target groups:
 
-![screenshot](documentation/features/am-i-responsive.png)
+- Amateur/professional photographers living in or visiting London who want to upload their images of outdoor sculpture and interact with other users.
+
+- People of all ages who want to view images of outdoor sculpture or register and interact with other users without necessarily uploading images.
+
+
+![screenshot](documentation/features/)
 
 ## UX
 ### Initial Design and Wireframes
 
-Content will be centred for small screens; for larger screens, where appropriate, content will display as two or three columns from left to right. I present here the primary wireframes for all pages on small screens with relevant samples for larger screens: : [WIREFRAMES.md](WIREFRAMES.md).
+Content will be centred. I present here the primary wireframes for all pages on small screens with relevant samples for larger screens: : [WIREFRAMES.md](WIREFRAMES.md).
 
 ### Colour Scheme
 
-Design and colour should enhance, not distract, so I wanted to adopt a clean and simple design with pastel-shade colours on a primarily white background, thus allowing the text and images to be the focus.
+Design and colour should enhance, not distract, so I wanted to adopt a clean and simple design with pastel-shade colours on a primarily white background, thus allowing the images to be the focus.
 
-I therefore chose a soft lavender for the primary background colour along with a similar shade of pink for onscreen messages, button-hover and secondary-button functions.
+I therefore chose a 
 
 Black, blue and green text were chosen to provide variety and a clear contrast with the white background.
 
@@ -423,6 +429,6 @@ To fork this repository, follow these steps:
 
 ### Acknowledgements
 
-- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN), for his invaluable guidance and support throughout the development of this project.
+- I would like to thank my Code Institute mentor, [Martina Terlevic ](https://github.com/SephTheOverwitch), for her guidance and support throughout the development of this project.
 
 
