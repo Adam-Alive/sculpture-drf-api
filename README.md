@@ -1,4 +1,4 @@
-# [London Outdoor Sculpture](https://herokuapp. com)
+# London Outdoor Sculpture API
 
 ## Project Purpose
 
@@ -8,16 +8,16 @@ Once registered, users will be able to post images, like and comment upon posts,
 
 The site administrator will be able to monitor and modify all aspects of the site including the deletion of posts, comments and users if necessary.
 
-## API Database
+## Project Structure
 
-This section of the project is the backend API database, built to support the React frontend, and is powered by the Django Rest Framework.
+The project consists of a frontend, built using React, and a backend API database built with the Django Rest Framework.
 
+This section covers the backend API, while the React frontend and project overall are covered here: [London Outdoor Sculpture README](https://github.com/Adam-Alive/london-outdoor-sculpture/blob/main/README.md)
 
-## XXX
 
 ## User Stories
 
-A complete list of user stories can be found here: 
+A complete list of user stories can be found here: [User Stories](https://github.com/Adam-Alive/london-outdoor-sculpture/blob/main/README.md#user-stories)
 
 
 ## Tools & Technologies Used
@@ -55,63 +55,30 @@ I then constructed an ERD in Excel for each model:
 
 ![screenshot](documentation/erd.png)
 
-At project completion I used [Mermaid](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) to auto-generate ERDs for the final project:
-
-```mermaid
-erDiagram
-    User {
-        int id
-        string username
-        string password
-        string email
-    }
-
-    Booking {
-        int id
-        date date
-        string sheet_time
-        string wheelchair_sheet
-    }
-    Booking }o--|| User : "username"
-
-    Faq {
-        int id
-        text question
-        text answer
-    }
-
-    GalleryImage {
-        int id
-        string gallery_image
-        string caption
-        datetime added_on
-        datetime caption_updated_on
-        boolean approved
-    }
-    GalleryImage }o--|| User : "username (author)"
-
-    Network {
-        int id
-        string club_name
-        string location
-        string website
-        string email
-        string wheelchair_access
-    }
-```
 ## Agile Project Management
 
-See: 
+For overall project management see: [London Outdoor Sculpture Agile Project Management](https://github.com/Adam-Alive/london-outdoor-sculpture/blob/main/README.md#agile-project-management)
 
+### GitHub Projects and Issues
 
-### MoSCoW Prioritisation
+[GitHub Projects](https://github.com/Adam-Alive/sculpture-drf-api/projects?query=is%3Aopen) served as an Agile tool for developing the backend API where epics and user stories were planned and then tracked on the Kanban board.
 
-I also used the MoSCow prioritisation model to add labels to my user stories within the issues tab:
+Using GitHub's projects and issues framework I created a GitHub project within the repository, and then developed issues within each:
+- [API Sculpture User Stories](https://github.com/users/Adam-Alive/projects/12/views/1)
 
-- **Must Have**: guaranteed to be delivered.
-- **Should Have**: adds significant value, but not vital.
-- **Could Have**: has small impact if left out.
-- **Won't Have**: not a priority for this iteration.
+I created a **User Story Template** to manage user stories and provide here an example of a completed issue:
+
+![Sample User Story](documentation/testing/sample.png)
+
+Progress on each user story was tracked on a weekly basis with overall project progress monitored on the milestones board, as shown below, where a list of closed and open milestones can be seen:
+
+**Closed at the time of writing:**
+
+![Milestones](documentation/testing/milestones-closed.png)
+
+**Open at the time of writing:**
+
+![Milestones](documentation/testing/milestones-open.png)
 
 ## Testing
 
@@ -121,11 +88,11 @@ For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 **IMPORTANT:**
 
-The live application is deployed on Heroku at: [Heroku](https://camden-curling-club-286959c89917.herokuapp.com).
+The live application is deployed on Heroku at: [Heroku]().
 
 ### PostgreSQL Database
 
-This project uses a PostgreSQL database at [Neon](https://neon.tech/).
+This project uses a PostgreSQL database at [Code Institute]().
 
 ### Cloudinary API
 
