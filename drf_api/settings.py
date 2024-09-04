@@ -34,9 +34,13 @@ SECRET_KEY = 'django-insecure-gjei)onkpnfm7nk!uhl=$dmu2!!ql)w$f)4*1^%wt6o^=3ydka
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-adamalive-sculpturedrfa-aw4zyb1un53.ws.codeinstitute-ide.net/',
+ALLOWED_HOSTS = ['8000-adamalive-sculpturedrfa-aw4zyb1un53.ws.codeinstitute-ide.net',
                 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://8000-adamalive-sculpturedrfa-aw4zyb1un53.ws.codeinstitute-ide.net",
+    "https://*.herokuapp.com"
+]
 
 # Application definition
 
