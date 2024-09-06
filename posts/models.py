@@ -21,6 +21,10 @@ class Post(models.Model):
     )
   
     class Meta:
+        """
+        Order posts by date created.
+        Display most recent first.
+        """
         ordering = ['-created_at']
 
     def __str__(self):
