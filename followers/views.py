@@ -18,3 +18,15 @@ class FollowerList(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
+
+
+# Use class from CI DRF-API walkthrough.
+class FollowerDetail(generics.RetrieveDestroyAPIView):
+    """
+    Retrieve a follower.
+    No Update view, as we either follow or unfollow users.
+    Destroy a follower, ie. unfollow someone if owner.
+    """
+    permission_classes = [IsOwnerOrReadOnly]
+    serializer_class = FollowerSerializer
+    queryset = Follower.objects.all()
