@@ -19,6 +19,16 @@ class ProfileList(generics.ListAPIView):
         following_count=Count('owner__following', distinct=True)
     ).order_by('-created_at')  
     serializer_class = ProfileSerializer
+    filter_backends = [
+        filters.OrderingFilter
+    ]
+    ordering_fields = [
+        'posts_count',
+        'followers_count',
+        'following_count',
+        'owner__following__created_at',
+        'owner__followed__created_at',
+    ]
 
 
 # Use class from CI DRF-API walkthrough.
