@@ -17,9 +17,9 @@ class Talk(models.Model):
 
     class Meta:
         """
-        List talks by date in descending order.
+        List talks by date in ascending order.
         """
-        ordering = ['-date']
+        ordering = ['date']
 
     def __str__(self):
         return f'{self.title} on {self.date}'
