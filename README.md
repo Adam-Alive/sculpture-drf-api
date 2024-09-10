@@ -10,45 +10,43 @@ The site administrator will be able to monitor and modify all aspects of the sit
 
 ## Project Structure
 
-The project consists of a frontend, built using React, and a backend API database built with the Django Rest Framework.
+The project consists of a front-end, built using React, and a back-end API database built with the Django Rest Framework.
 
-This section covers the backend API, while the React frontend and project overall are covered here: [London Outdoor Sculpture README](https://github.com/Adam-Alive/london-outdoor-sculpture/blob/main/README.md)
+This section covers the back-end API, while the React front-end and project overall are covered here: **[London Outdoor Sculpture README](https://github.com/Adam-Alive/london-outdoor-sculpture/blob/main/README.md)**
 
+The back-end API is deployed here: **[sculpture-drf-api](https://sculpture-drf-api-2aa8ed66624d.herokuapp.com/)**
 
+The front-end website is deployed here **[London Outdoor Sculpture] (link TBC)**
 ## User Stories
 
-A complete list of user stories can be found here: [User Stories](https://github.com/Adam-Alive/london-outdoor-sculpture/blob/main/README.md#user-stories)
+User stories are listed here: **[User Stories](https://github.com/Adam-Alive/london-outdoor-sculpture/blob/main/README.md#user-stories)**
 
 
 ## Tools & Technologies Used
 
 - [Markdown Builder](https://tim.2bn.dev/markdown-builder) to generate README and TESTING templates.
-- [Git](https://git-scm.com) for version control. (`git add`, `git commit`, `git push`)
 - [GitHub](https://github.com) for secure online code storage.
 - [Gitpod](https://gitpod.io) as a cloud-based IDE for development.
-- [HTML](https://en.wikipedia.org/wiki/HTML) for the main site content.
-- [CSS](https://en.wikipedia.org/wiki/CSS) for the main site design and layout.
-- [JavaScript](https://www.javascript.com) for user interaction on the site.
 - [Python](https://www.python.org) for back-end programming.
-- [Heroku](https://www.heroku.com) for hosting the deployed back-end site.
-- [Bootstrap](https://img.shields.io/badge/Bootstrap-grey?logo=bootstrap&logoColor=7952B3) for the front-end CSS framework with modern responsiveness and pre-built components.
 - [Django](https://www.djangoproject.com) as the Python framework for the site.
+- [Dango Rest Framework](https://www.django-rest-framework.org) for building the back-end API.
 - [PostgreSQL](https://www.postgresql.org) for relational database management.
-- [Neon](https://neon.tech/) to host the PostgreSQL database.
+- [PostgreSQL from Code Institute](https://dbs.ci-dbs.net/) to host the PostgreSQL database.
 - [Cloudinary](https://cloudinary.com) for online static file storage.
-- [WhiteNoise](https://whitenoise.readthedocs.io) for serving static files with Heroku.
-- [Font Awesome](https://fontawesome.com) for icons.
+- [Heroku](https://www.heroku.com) for hosting the deployed back-end site.
 - [Mermaid](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) to generate ERDs for the completed project.
 
 ## Database Design
 
 ### Models
-In designing the database I developed four models, in addition to Django's User model:
+In designing the database I developed six models, in addition to Django's User model:
 - User (Django)
-- Booking
-- GalleryImage
-- Faqs
-- Network
+- Comment
+- Follower
+- Like
+- Post
+- Profile
+- Talk
 
 ### Entity Relationship Diagrams (ERDs)
 I then constructed an ERD in Excel for each model:
@@ -232,11 +230,8 @@ To fork this repository, follow these steps:
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | An excellent tool to help generate the Markdown files |
-| [John Abdsho](https://www.youtube.com/watch?v=s5xbtuo9pR0) | bookings | Initial ideas on how to create a booking system with Django|
-| [W3Schools](https://www.w3schools.com/bootstrap5/) | gallery and bookings | Additional support with Bootstrap grids and modals|
 | [Stack Overflow](https://stackoverflow.com/questions/21938028/how-to-get-a-favicon-to-show-up-in-my-django-app) | favicon | How to get favicon to show in Django app |
-| [Scottish Curling](https://www.scottishcurling.org/) |  home and faqs  | Reference  |
-| [British Curling](https://www.britishcurling.org.uk/) |  home and faqs  | Reference  |
+
 
 ### Media
 
@@ -249,5 +244,3 @@ To fork this repository, follow these steps:
 ### Acknowledgements
 
 - I would like to thank my Code Institute mentor, [Martina Terlevic ](https://github.com/SephTheOverwitch), for her guidance and support throughout the development of this project.
-
-
