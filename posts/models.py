@@ -15,6 +15,7 @@ class Post(models.Model):
     artist = models.CharField(max_length=255)
     street = models.CharField(max_length=255)
     postcode = models.CharField(max_length=4)
+    borough = models.CharField(max_length=255, default="")
     image = models.ImageField(
         upload_to='images/', default='../default_post_bpoaox',
         blank=True
