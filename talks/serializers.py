@@ -8,6 +8,6 @@ class TalkSerializer(serializers.ModelSerializer):
     class Meta:
         model = Talk
         fields = [
-            'id', 'owner', 'title', 'speaker', 'date', 'time',
-            'summary', 'created_at', 'updated_at',
+            'id', 'owner', 'title', 'speaker', 'date', 'start_time',
+            'end_time', 'summary', 'created_at', 'updated_at',
         ]
