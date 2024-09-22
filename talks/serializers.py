@@ -1,4 +1,4 @@
-from django.contrib.humanize.templatetags.humanize import naturaltime
+from django.contrib.humanize.templatetags.humanize import naturaltimeTA
 from rest_framework import serializers
 from .models import Talk
 
