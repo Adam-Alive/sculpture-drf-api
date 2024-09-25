@@ -34,6 +34,7 @@ class PostList(generics.ListCreateAPIView):
         'artist',
         'street',
         'postcode',
+        'borough',
     ]
     ordering_fields = [
         'likes_count',
