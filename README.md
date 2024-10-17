@@ -4,7 +4,7 @@
 
 The purpose of this project is to create a photo-sharing website for images of outdoor sculpture across the Greater London area.
 
-Once registered, users will be able to post images, like and comment upon posts, follow other users and sign-up for online events.
+Once registered, users will be able to post images, like and comment upon posts, follow other users and sign-up for online talks.
 
 The site administrator will be able to monitor and modify all aspects of the site including the deletion of posts, comments and users if necessary.
 
@@ -16,7 +16,7 @@ This section covers the back-end API, while the React front-end and project over
 
 The back-end API is deployed here: **[sculpture-drf-api](https://sculpture-drf-api-2aa8ed66624d.herokuapp.com/)**
 
-The front-end website is deployed here **[London Outdoor Sculpture] (link TBC)**
+The front-end website is deployed here **[London Outdoor Sculpture](https://london-outdoor-sculpture-392a8873bf1b.herokuapp.com/)**
 ## User Stories
 
 User stories are listed here: **[User Stories](https://github.com/Adam-Alive/london-outdoor-sculpture/blob/main/README.md#user-stories)**
@@ -66,13 +66,13 @@ Using GitHub's projects and issues framework I created a GitHub project within t
 
 I created a **User Story Template** to manage user stories and provide here an example of a completed issue:
 
-![Sample User Story](documentation/testing/sample.png)
+![Sample User Story](documentation/api-issue.png)
 
 Progress on each user story was tracked on a weekly basis with overall project progress monitored on the milestones board, as shown below, where a list of closed and open milestones can be seen:
 
 **Closed at the time of writing:**
 
-![Milestones](documentation/testing/milestones-closed.png)
+![Milestones](documentation/api-ms.png)
 
 **Open at the time of writing:**
 
@@ -198,28 +198,21 @@ Once the project is cloned or forked, follow these steps run it locally:
 
 To clone this repository, follow these steps:
 
-1. Go to the [GitHub repository](https://github.com/Adam-Alive/camden-curling-club).
+1. Go to the [GitHub repository](https://github.com/Adam-Alive/sculpture-drf-api).
 2. Locate the Code button above the list of files and click.
 3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard.
 4. Open Git Bash or Terminal.
 5. Change the current working directory to the one where you want the cloned directory.
 6. In your IDE Terminal, type the following command to clone my repository:
-    - `git clone https://github.com/Adam-Alive/camden-curling-club.git`
+    - `git clone https://github.com/Adam-Alive/sculpture-drf-api.git`
 7. Press Enter to create your local clone.
-
-Alternatively, if using Gitpod, you can click below to create your own workspace using this repository:
-
-[Open in Gitpod](https://gitpod.io/#https://github.com/Adam-Alive/camden-curling-club)
-
-Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
-A tutorial on this can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
 
 #### Forking
 
 By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
 To fork this repository, follow these steps:
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Adam-Alive/camden-curling-club)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Adam-Alive/sculpture-drf-api)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
@@ -227,20 +220,13 @@ To fork this repository, follow these steps:
 
 ### Content
 
-| Source | Location | Notes |
-| --- | --- | --- |
-| [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | An excellent tool to help generate the Markdown files |
-| [Stack Overflow](https://stackoverflow.com/questions/21938028/how-to-get-a-favicon-to-show-up-in-my-django-app) | favicon | How to get favicon to show in Django app |
-
-
-### Media
-
-| Source | Location | Type | Notes |
-| --- | --- | --- | --- |
-| [Free Images](https://www.freeimages.com/) | home and gallery | images | Various images of curling |
-| [Pexels](https://www.pexels.com/) | home and gallery  | images | Various images of curling  |
-| [Pixelied](https://pixelied.com/convert/jpg-converter/jpg-to-webp) | home and gallery  | images | Convert png to webp |
+| Source | Notes |
+| --- | --- |
+| Code Institute Advanced Front End Module| Django Rest Framework unit for guidance and inspiration in develping this API.|
+| [Markdown Builder](https://tim.2bn.dev/markdown-builder) | An excellent tool to help generate Markdown files for the README. |
+| [Stack Overflow](https://stackoverflow.com/) | For general troubleshooting. |
+| [W3 Schools](https://www.w3schools.com/) | For general troubleshooting. |
 
 ### Acknowledgements
 
-- I would like to thank my Code Institute mentor, [Martina Terlevic ](https://github.com/SephTheOverwitch), for her guidance and support throughout the development of this project.
+- I would like to thank my Code Institute mentor, Mitko Bachvarov, for his guidance and support throughout the development of this project.
