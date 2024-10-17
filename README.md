@@ -39,7 +39,7 @@ User stories are listed here: **[User Stories](https://github.com/Adam-Alive/lon
 ## Database Design
 
 ### Models
-In designing the database I developed six models, in addition to Django's User model:
+In designing the database I developed seven models, in addition to Django's User model:
 - User (Django)
 - Comment
 - Follower
@@ -47,11 +47,16 @@ In designing the database I developed six models, in addition to Django's User m
 - Post
 - Profile
 - Talk
+- Booking
 
 ### Entity Relationship Diagrams (ERDs)
-I then constructed an ERD in Excel for each model:
+I then constructed an ERD in Excel for each model and show here the Talk and Booking models:
 
 ![screenshot](documentation/erd.png)
+
+At project completion I used [Mermaid](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) to auto-generate ERDs for the final project:
+
+
 
 ## Agile Project Management
 
@@ -76,7 +81,7 @@ Progress on each user story was tracked on a weekly basis with overall project p
 
 **Open at the time of writing:**
 
-![Milestones](documentation/testing/milestones-open.png)
+![Milestones](documentation/api-open.png)
 
 ## Testing
 
@@ -224,7 +229,7 @@ To fork this repository, follow these steps:
 | --- | --- |
 | Code Institute Advanced Front End Module| Django Rest Framework unit for guidance and inspiration in develping this API.|
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | An excellent tool to help generate Markdown files for the README. |
-| [Stack Overflow](https://stackoverflow.com/) | For general troubleshooting. |
+| [Stack Overflow](https://stackoverflow.com/) | For bugs and general troubleshooting. |
 | [W3 Schools](https://www.w3schools.com/) | For general troubleshooting. |
 
 ### Acknowledgements
