@@ -39,22 +39,66 @@ User stories are listed here: **[User Stories](https://github.com/Adam-Alive/lon
 ## Database Design
 
 ### Models
-In designing the database I developed seven models, in addition to Django's User model:
+The database is comprised of eight models, including Django's User model:
 - User (Django)
+- Booking
 - Comment
 - Follower
 - Like
 - Post
 - Profile
 - Talk
-- Booking
 
-### Entity Relationship Diagrams (ERDs)
-I then constructed an ERD in Excel for each model and show here the Talk and Booking models:
+I then constructed an ERD for each model and show here the Talk and Booking models:
 
 ![screenshot](documentation/erd.png)
 
 At project completion I used [Mermaid](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) to auto-generate ERDs for the final project:
+
+(CODE FROM PROJECT 4 TO BE UPDATED)
+
+```mermaid
+erDiagram
+    User {
+        int id
+        string username
+        string password
+        string email
+    }
+
+    Booking {
+        int id
+        date date
+        string sheet_time
+        string wheelchair_sheet
+    }
+    Booking }o--|| User : "username"
+
+    Faq {
+        int id
+        text question
+        text answer
+    }
+
+    GalleryImage {
+        int id
+        string gallery_image
+        string caption
+        datetime added_on
+        datetime caption_updated_on
+        boolean approved
+    }
+    GalleryImage }o--|| User : "username (author)"
+
+    Network {
+        int id
+        string club_name
+        string location
+        string website
+        string email
+        string wheelchair_access
+    }
+```
 
 
 
