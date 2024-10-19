@@ -17,9 +17,9 @@ class Booking(models.Model):
 
     class Meta:
         """
-        List bookings by date in ascending order.
+        List bookings by date created in descending order.
         """
-        ordering = ['created_at']
+        ordering = ['-created_at']
 
     def __str__(self):
         return f"{self.owner}'s booking for {self.talk}"
