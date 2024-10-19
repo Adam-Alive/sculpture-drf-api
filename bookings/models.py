@@ -23,4 +23,4 @@ class Booking(models.Model):
         ordering = ['-created_at']       
 
     def __str__(self):
-        return f"{self.owner}'s booking for {self.title}"
+        return f"{self.owner}'s booking for {self.talk}"
