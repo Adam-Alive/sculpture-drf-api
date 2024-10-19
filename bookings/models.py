@@ -20,6 +20,7 @@ class Booking(models.Model):
         List bookings by date created in descending order.
         """
         ordering = ['-created_at']
+        unique_together = ['owner', 'talk']
 
     def __str__(self):
         return f"{self.owner}'s booking for {self.talk}"
