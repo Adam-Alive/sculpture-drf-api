@@ -75,7 +75,8 @@ REST_AUTH_SERIALIZERS = {
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEV' in os.environ
+# DEBUG = 'DEV' in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-adamalive-sculpturedrfa-aw4zyb1un53.ws.codeinstitute-ide.net',                
                 '.herokuapp.com', 'sculpture-drf-api-2aa8ed66624d.herokuapp.com'
