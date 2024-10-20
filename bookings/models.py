@@ -10,6 +10,8 @@ class Booking(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)   
     talk = models.ForeignKey(Talk, on_delete=models.CASCADE)
     date = models.DateField(null=True, blank=True)
+    start_time = models.TimeField(null=True, blank=True)
+    end_time = models.TimeField(null=True, blank=True)
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=150)
     questions = models.TextField(blank=True)
