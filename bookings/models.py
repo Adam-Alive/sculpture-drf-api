@@ -12,7 +12,8 @@ class Booking(models.Model):
     speaker = models.CharField(max_length=100, default="")
     date = models.DateField(null=True, blank=True)
     start_time = models.TimeField(null=True, blank=True)
-    end_time = models.TimeField(null=True, blank=True) 
+    end_time = models.TimeField(null=True, blank=True)
+    summary = models.TextField()
     questions = models.TextField(blank=True)
     suggestions = models.TextField(blank=True)
 
