@@ -15,5 +15,5 @@ class BookingSerializer(serializers.ModelSerializer):
         model = Booking
         fields = [
             'id', 'owner', 'talk', 'speaker', 'date', 'start_time', 'end_time', 'name', 'email', 'questions',
-            'suggestions', 'created_at', 'updated_at',
+            'suggestions', 'created_at', 'updated_at', 'is_owner', 'profile_id',
         ]
