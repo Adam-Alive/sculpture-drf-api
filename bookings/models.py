@@ -13,7 +13,7 @@ class Booking(models.Model):
     date = models.DateField(null=True, blank=True)
     start_time = models.TimeField(null=True, blank=True)
     end_time = models.TimeField(null=True, blank=True)
-    summary = models.TextField()
+    summary = models.TextField(default="")
     questions = models.TextField(blank=True)
     suggestions = models.TextField(blank=True)
 
