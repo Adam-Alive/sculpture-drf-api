@@ -4,7 +4,7 @@ from .models import Booking
 
 class BookingSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
-    is_owner = serializers.SerializerMethodField()  
+    is_owner = serializers.SerializerMethodField()
 
     def get_is_owner(self, obj):
         request = self.context['request']
@@ -13,6 +13,6 @@ class BookingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Booking
         fields = [
-            'id', 'owner', 'talk', 'speaker', 'date', 'start_time', 'end_time', 'name', 'email', 'questions',
-            'suggestions', 'created_at', 'updated_at', 'is_owner',
+            'id', 'owner', 'talk', 'speaker', 'date', 'start_time',
+            'end_time', 'questions', 'suggestions', 'is_owner',
         ]
