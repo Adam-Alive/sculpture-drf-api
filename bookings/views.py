@@ -9,7 +9,7 @@ class BookingList(generics.ListCreateAPIView):
     List all talk event bookings made by user.
     """
     serializer_class = BookingSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Booking.objects.all()
 
     def perform_create(self, serializer):
@@ -20,6 +20,6 @@ class BookingDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     A user can retrieve, edit and delete a booking they own.
     """
-    permission_classes = [IsOwnerOrReadOnly]
+    permission_classes = [IsAuthenticatedOrReadOnly]
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
