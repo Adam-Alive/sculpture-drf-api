@@ -20,6 +20,6 @@ class BookingDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     A user can retrieve, edit and delete a booking they own.
     """
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    permission_classes = [IsOwnerOrReadOnly]
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
