@@ -16,12 +16,14 @@ class Booking(models.Model):
     summary = models.TextField(default="")
     questions = models.TextField(blank=True)
     suggestions = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         """
         List bookings by date in ascending order.
         """
-        ordering = ['date']      
+        ordering = ['date']  
 
     def __str__(self):
         return f"{self.owner}'s booking for {self.talk}"
