@@ -9,6 +9,7 @@ class Booking(models.Model):
     """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     talk = models.ForeignKey(Talk, on_delete=models.CASCADE)
+    title = models.CharField(max_length=200, default="")
     speaker = models.CharField(max_length=100, default="")
     date = models.DateField(null=True, blank=True)
     start_time = models.TimeField(null=True, blank=True)
