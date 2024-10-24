@@ -13,7 +13,7 @@ class BookingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Booking
         fields = [
-            'id', 'owner', 'talk', 'title', 'speaker', 'date', 'start_time',
+            'id', 'owner', 'title', 'speaker', 'date', 'start_time',
             'end_time', 'summary', 'questions', 'suggestions',
             'created_at', 'updated_at', 'is_owner',
         ]
