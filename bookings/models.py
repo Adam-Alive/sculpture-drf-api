@@ -8,7 +8,7 @@ class Booking(models.Model):
     Booking model for user to register for talk events.
     """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
-    title = models.ForeignKey(Talk, on_delete=models.CASCADE)
+    title = models.CharField(max_length=200)
     speaker = models.CharField(max_length=100)
     date = models.DateField(null=True, blank=True)
     start_time = models.TimeField(null=True, blank=True)
