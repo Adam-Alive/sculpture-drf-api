@@ -26,4 +26,4 @@ class Booking(models.Model):
         ordering = ['date']
 
     def __str__(self):
-        return f"{self.owner}'s booking for {self.talk}"
+        return f"{self.owner}'s booking for {self.title}"
