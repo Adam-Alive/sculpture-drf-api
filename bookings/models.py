@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from talks.models import Talk
 
 
 class Booking(models.Model):
@@ -23,7 +22,7 @@ class Booking(models.Model):
         """
         List bookings by date in ascending order.
         """
-        ordering = ['date']
+        ordering = ['date']        
 
     def __str__(self):
         return f"{self.owner}'s booking for {self.title}"
