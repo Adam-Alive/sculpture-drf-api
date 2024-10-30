@@ -23,7 +23,7 @@ class Booking(models.Model):
         List bookings by date in ascending order.
         """
         ordering = ['date']
-        unique_together = ['owner', 'title']
+        # unique_together = ['owner', 'title']
 
     def __str__(self):
         return f"{self.owner}'s booking for {self.title}"
