@@ -1,5 +1,4 @@
-
-# from django.db import IntegrityError
+from django.db import IntegrityError
 from rest_framework import serializers
 from .models import Booking
 
@@ -21,10 +20,10 @@ class BookingSerializer(serializers.ModelSerializer):
             'created_at', 'updated_at', 'is_owner', 'profile_id',
         ]
 
-    # def create(self, validated_data):
-    #     try:
-    #         return super().create(validated_data)
-    #     except IntegrityError:
-    #         raise serializers.ValidationError({
-    #             'detail': 'possible duplicate'
-    #         })
+    def create(self, validated_data):
+        try:
+            return super().create(validated_data)
+        except IntegrityError:
+            raise serializers.ValidationError({
+                'detail': 'possible duplicate'
+            })
