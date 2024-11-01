@@ -19,9 +19,6 @@ class BookingList(generics.ListCreateAPIView):
         'owner__profile',
     ]
 
-    def perform_create(self, serializer):
-        serializer.save(owner=self.request.user)
-
 
 class BookingDetail(generics.RetrieveUpdateDestroyAPIView):
     """
