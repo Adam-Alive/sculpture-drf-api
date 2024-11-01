@@ -1,6 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 from talks.models import Talk
+import logging
+logger = logging.getLogger('django.server')
+
 
 class Booking(models.Model):
     """
@@ -19,6 +22,7 @@ class Booking(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    logger.error('some important infos')
     class Meta:
         """
         List bookings by date in ascending order.
