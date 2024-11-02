@@ -18,12 +18,11 @@ class Booking(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    # class Meta:
-    #     """
-    #     List bookings by date in ascending order.
-    #     """
-    #     ordering = ['date']
-    #     unique_together = ['owner', 'title']
+    class Meta:
+        """
+        List bookings by date in ascending order.
+        """
+        ordering = ['date']     
 
     def __str__(self):
         return f"{self.owner}'s booking for {self.title}"
