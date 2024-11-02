@@ -31,7 +31,7 @@ User stories are listed here: **[User Stories](https://github.com/Adam-Alive/lon
 - [Django](https://www.djangoproject.com) as the Python framework for the site.
 - [Dango Rest Framework](https://www.django-rest-framework.org) for building the back-end API.
 - [PostgreSQL](https://www.postgresql.org) for relational database management.
-- [PostgreSQL from Code Institute](https://dbs.ci-dbs.net/) to host the PostgreSQL database.
+- [Neon](https://neon.tech/) to host the PostgreSQL database.
 - [Cloudinary](https://cloudinary.com) for online static file storage.
 - [Heroku](https://www.heroku.com) for hosting the deployed back-end site.
 - [Mermaid](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) to generate ERDs for the completed project.
@@ -117,6 +117,9 @@ I created a **User Story Template** to manage user stories and provide here an e
 
 ![Sample User Story](documentation/api-issue.png)
 
+
+REVIEW TO:
+
 Progress on each user story was tracked on a weekly basis with overall project progress monitored on the milestones board, as shown below, where a list of closed and open milestones can be seen:
 
 **Closed at the time of writing:**
@@ -126,6 +129,13 @@ Progress on each user story was tracked on a weekly basis with overall project p
 **Open at the time of writing:**
 
 ![Milestones](documentation/api-open.png)
+
+END OF REVIEW
+
+**A summary of closed issues can be accessed via this tab:**
+
+- [![GitHub closed issues](https://img.shields.io/github/issues-closed/Adam-Alive/sculpture-drf-api)](https://github.com/Adam-Alive/sculpture-drf-api/issues?q=is%3Aissue+is%3Aclosed)
+
 
 ## Testing
 
