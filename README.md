@@ -53,9 +53,8 @@ I then constructed an ERD for each model and show here the Talk and Booking mode
 
 ![screenshot](documentation/erd.png)
 
-At project completion I used [Mermaid](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) to auto-generate ERDs for the final project:
+At project completion I used [Mermaid](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) to generate ERDs for the final project:
 
-(CODE FROM PROJECT 4 TO BE UPDATED)
 
 ```mermaid
 erDiagram
@@ -65,7 +64,7 @@ erDiagram
         string password        
     }
     Booking {
-        int id
+        int owner_id
         string title
         string speaker
         date date
@@ -79,7 +78,7 @@ erDiagram
     }
     Booking }o--|| User : "owner"
     Comment {
-        int id
+        int owner_id
         int post_id
         text content
         datetime created_at
@@ -87,19 +86,21 @@ erDiagram
     }
     Comment }o--|| User : "owner"
     Follower {
-        int id
+        int owner_id
         int followed_id
-        datetime created_at        
+        datetime created_at
+        datetime updated_at
+        text content     
     }
     Follower }o--|| User : "owner"
     Like {
-        int id
+        int owner_id
         int post_id
         datetime created_at
     }
     Like }o--|| User : "owner"
     Post {
-        int id
+        int owner_id
         string title
         string artist
         string street
@@ -111,7 +112,7 @@ erDiagram
     }
     Post }o--|| User : "owner"
     Profile {
-        int id
+        int owner_id
         string name
         text content
         string image
@@ -120,7 +121,7 @@ erDiagram
     }
     Profile }o--|| User : "owner"
     Talk {
-        int id
+        int owner_id
         string title
         string speaker
         date date
@@ -130,10 +131,8 @@ erDiagram
         datetime created_at
         datetime updated_at    
     }
-     Talk }o--|| User : "owner"  
+     Talk }o--|| User : "owner (admin)"  
 ```
-
-
 
 ## Agile Project Management
 
@@ -176,13 +175,9 @@ For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ## Deployment
 
-**IMPORTANT:**
-
-The live application is deployed on Heroku at: [Heroku]().
-
 ### PostgreSQL Database
 
-This project uses a PostgreSQL database at [Code Institute]().
+This project uses a PostgreSQL database at [Neon](https://neon.tech/).
 
 ### Cloudinary API
 
@@ -314,7 +309,7 @@ To fork this repository, follow these steps:
 
 | Source | Notes |
 | --- | --- |
-| Code Institute Advanced Front End Module| Django Rest Framework unit for guidance and inspiration in develping this API.|
+| [Code Institute](https://codeinstitute.net/) Advanced Front End Module| Django Rest Framework unit for guidance and inspiration in develping this API.|
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | An excellent tool to help generate Markdown files for the README. |
 | [Stack Overflow](https://stackoverflow.com/) | For bugs and general troubleshooting. |
 | [W3 Schools](https://www.w3schools.com/) | For general troubleshooting. |
