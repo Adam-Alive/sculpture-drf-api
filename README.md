@@ -77,7 +77,60 @@ erDiagram
         datetime created_at
         datetime updated_at
     }
-    Booking }o--|| User : "owner"    
+    Booking }o--|| User : "owner"
+    Comment {
+        int id
+        int post_id
+        text content
+        datetime created_at
+        datetime updated_at
+    }
+    Comment }o--|| User : "owner"
+    Follower {
+        int id
+        int followed_id
+        datetime created_at        
+    }
+    Follower }o--|| User : "owner"
+    Like {
+        int id
+        int post_id
+        datetime created_at
+    }
+    Like }o--|| User : "owner"
+    Post {
+        int id
+        string title
+        string artist
+        string street
+        string postcode
+        string borough
+        string image
+        datetime created_at
+        datetime updsted_at
+    }
+    Post }o--|| User : "owner"
+    Profile {
+        int id
+        string name
+        text content
+        string image
+        datetime created_at
+        datetime updated_at    
+    }
+    Profile }o--|| User : "owner"
+    Talk {
+        int id
+        string title
+        string speaker
+        date date
+        string strart_time
+        string end_time
+        text summary
+        datetime created_at
+        datetime updated_at    
+    }
+     Talk }o--|| User : "owner"  
 ```
 
 
