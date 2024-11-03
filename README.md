@@ -85,6 +85,7 @@ erDiagram
         datetime updated_at
     }
     Comment }o--|| User : "owner"
+    Comment }o--|| Post : "owner"
     Follower {
         int owner_id
         int followed_id
@@ -99,6 +100,7 @@ erDiagram
         datetime created_at
     }
     Like }o--|| User : "owner"
+    Like }o--|| Post : "owner"
     Post {
         int owner_id
         string title
@@ -108,7 +110,7 @@ erDiagram
         string borough
         string image
         datetime created_at
-        datetime updsted_at
+        datetime updated_at
     }
     Post }o--|| User : "owner"
     Profile {
