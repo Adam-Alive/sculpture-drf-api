@@ -76,7 +76,7 @@ erDiagram
         datetime created_at
         datetime updated_at
     }
-    Booking }o--|| User : "owner"
+    Booking }o--|| User : "username"
     Comment {
         int owner_id
         int post_id
@@ -84,8 +84,8 @@ erDiagram
         datetime created_at
         datetime updated_at
     }
-    Comment }o--|| User : "owner"
-    Comment }o--|| Post : "owner"
+    Comment }o--|| User : "username"
+    Comment }o--|| Post : "username"
     Follower {
         int owner_id
         int followed_id
@@ -93,14 +93,14 @@ erDiagram
         datetime updated_at
         text content     
     }
-    Follower }o--|| User : "owner"
+    Follower }o--|| User : "username"
     Like {
         int owner_id
         int post_id
         datetime created_at
     }
-    Like }o--|| User : "owner"
-    Like }o--|| Post : "owner"
+    Like }o--|| User : "username"
+    Like }o--|| Post : "username"
     Post {
         int owner_id
         string title
@@ -112,7 +112,7 @@ erDiagram
         datetime created_at
         datetime updated_at
     }
-    Post }o--|| User : "owner"
+    Post }o--|| User : "username"
     Profile {
         int owner_id
         string name
@@ -121,7 +121,7 @@ erDiagram
         datetime created_at
         datetime updated_at    
     }
-    Profile }o--|| User : "owner"
+    Profile }o--|| User : "username"
     Talk {
         int owner_id
         string title
@@ -133,7 +133,7 @@ erDiagram
         datetime created_at
         datetime updated_at    
     }
-     Talk }o--|| User : "owner (admin)"  
+     Talk }o--|| User : "username (admin)"
 ```
 
 ## Agile Project Management
@@ -142,29 +142,25 @@ For overall project management see: [London Outdoor Sculpture Agile Project Mana
 
 ### GitHub Projects and Issues
 
-[GitHub Projects](https://github.com/Adam-Alive/sculpture-drf-api/projects?query=is%3Aopen) served as an Agile tool for developing the backend API where epics and user stories were planned and then tracked on the Kanban board.
+[GitHub Projects](https://github.com/Adam-Alive/sculpture-drf-api/projects?query=is%3Aopen) served as an Agile tool for developing the back-end API where epics and user stories were planned and then tracked on the Kanban board.
 
 Using GitHub's projects and issues framework I created a GitHub project within the repository, and then developed issues within each:
 - [API Sculpture User Stories](https://github.com/users/Adam-Alive/projects/12/views/1)
 
-I created a **User Story Template** to manage user stories and provide here an example of a completed issue:
+I created a user story template to manage user stories and provide here an example of a completed issue:
 
 ![Sample User Story](documentation/api-issue.png)
 
+### MoSCoW Prioritisation
 
-REVIEW TO:
+I used the MoSCow prioritisation model to add labels to my user stories within the issues tab:
 
-Progress on each user story was tracked on a weekly basis with overall project progress monitored on the milestones board, as shown below, where a list of closed and open milestones can be seen:
+- **Must Have**: guaranteed to be delivered.
+- **Should Have**: adds significant value, but not vital.
+- **Could Have**: has small impact if left out (and not included for the purposes of this project).
+- **Won't Have**: not a priority for this iteration (and not included for the purposes of this project).
 
-**Closed at the time of writing:**
-
-![Milestones](documentation/api-ms.png)
-
-**Open at the time of writing:**
-
-![Milestones](documentation/api-open.png)
-
-END OF REVIEW
+Progress on each user story was monitored on a weekly basis and tracked on the [Kanban board](https://github.com/users/Adam-Alive/projects/12).
 
 **A summary of closed issues can be accessed via this tab:**
 
