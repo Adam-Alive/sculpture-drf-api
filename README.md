@@ -64,11 +64,10 @@ erDiagram
         string username
         string password        
     }
-
     Booking {
         int id
         string title
-        string
+        string speaker
         date date
         string start_time
         string end_time
@@ -77,50 +76,8 @@ erDiagram
         text suggestions
         datetime created_at
         datetime updated_at
-
     }
-    Booking }o--|| User : "username"
-
-    Comment {
-        int id
-        text question
-        text answer
-    }
-     Comment }o--|| User : "username"
-
-    Follower {
-        int id
-        string gallery_image
-        string caption
-        datetime added_on
-        datetime caption_updated_on
-        boolean approved
-    }
-    Follower }o--|| User : "username (author)"
-
-    Like {
-        int id
-    
-    }
-     Like }o--|| User : "username (author)"
-
-    Post {
-        int id
-    
-    }
-     Post }o--|| User : "username (author)"
-
-    Profile {
-        int id
-    
-    }
-     Profile }o--|| User : "username (author)"
-
-    Talk {
-        int id
-    
-    }
-     Talk }o--|| User : "username (author)" 
+    Booking }o--|| User : "owner"    
 ```
 
 
