@@ -142,7 +142,7 @@ For overall project management see: [London Outdoor Sculpture Agile Project Mana
 
 ### GitHub Projects and Issues
 
-[GitHub Projects](https://github.com/Adam-Alive/sculpture-drf-api/projects?query=is%3Aopen) served as an Agile tool for developing the back-end API where epics and user stories were planned and then tracked on the Kanban board.
+[GitHub Projects](https://github.com/Adam-Alive/sculpture-drf-api/projects?query=is%3Aopen) served as an Agile tool for developing the back-end API where epics and user stories were planned and then tracked on the [Kanban board](https://github.com/users/Adam-Alive/projects/12).
 
 Using GitHub's projects and issues framework I created a GitHub project within the repository, and then developed issues within each:
 - [API Sculpture User Stories](https://github.com/users/Adam-Alive/projects/12/views/1)
@@ -160,9 +160,7 @@ I used the MoSCow prioritisation model to add labels to my user stories within t
 - **Could Have**: has small impact if left out (and not included for the purposes of this project).
 - **Won't Have**: not a priority for this iteration (and not included for the purposes of this project).
 
-Progress on each user story was monitored on a weekly basis and tracked on the [Kanban board](https://github.com/users/Adam-Alive/projects/12).
-
-**A summary of closed issues can be accessed via this tab:**
+### Summary of closed issues:
 
 - [![GitHub closed issues](https://img.shields.io/github/issues-closed/Adam-Alive/sculpture-drf-api)](https://github.com/Adam-Alive/sculpture-drf-api/issues?q=is%3Aissue+is%3Aclosed)
 
