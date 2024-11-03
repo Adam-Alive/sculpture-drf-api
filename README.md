@@ -62,25 +62,33 @@ erDiagram
     User {
         int id
         string username
-        string password
-        string email
+        string password        
     }
 
     Booking {
         int id
+        string title
+        string
         date date
-        string sheet_time
-        string wheelchair_sheet
+        string start_time
+        string end_time
+        text summary
+        text questions
+        text suggestions
+        datetime created_at
+        datetime updated_at
+
     }
     Booking }o--|| User : "username"
 
-    Faq {
+    Comment {
         int id
         text question
         text answer
     }
+     Comment }o--|| User : "username"
 
-    GalleryImage {
+    Follower {
         int id
         string gallery_image
         string caption
@@ -88,16 +96,31 @@ erDiagram
         datetime caption_updated_on
         boolean approved
     }
-    GalleryImage }o--|| User : "username (author)"
+    Follower }o--|| User : "username (author)"
 
-    Network {
+    Like {
         int id
-        string club_name
-        string location
-        string website
-        string email
-        string wheelchair_access
+    
     }
+     Like }o--|| User : "username (author)"
+
+    Post {
+        int id
+    
+    }
+     Post }o--|| User : "username (author)"
+
+    Profile {
+        int id
+    
+    }
+     Profile }o--|| User : "username (author)"
+
+    Talk {
+        int id
+    
+    }
+     Talk }o--|| User : "username (author)" 
 ```
 
 
