@@ -1,4 +1,4 @@
-# London Outdoor Sculpture API
+# [London Outdoor Sculpture API](https://sculpture-drf-api-2aa8ed66624d.herokuapp.com/)
 
 ## Project Purpose
 
@@ -20,7 +20,6 @@ The front-end website is deployed here **[London Outdoor Sculpture](https://lond
 ## User Stories
 
 User stories are listed here: **[User Stories](https://github.com/Adam-Alive/london-outdoor-sculpture/blob/main/README.md#user-stories)**
-
 
 ## Tools & Technologies Used
 
@@ -54,7 +53,6 @@ I then constructed an ERD for each model and show here the Talk and Booking mode
 ![screenshot](documentation/erd.png)
 
 At project completion I used [Mermaid](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) to generate ERDs for the final project:
-
 
 ```mermaid
 erDiagram
@@ -163,7 +161,6 @@ I used the MoSCow prioritisation model to add labels to my user stories within t
 ### Summary of closed issues:
 
 - [![GitHub closed issues](https://img.shields.io/github/issues-closed/Adam-Alive/sculpture-drf-api)](https://github.com/Adam-Alive/sculpture-drf-api/issues?q=is%3Aissue+is%3Aclosed)
-
 
 ## Testing
 

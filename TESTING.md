@@ -16,12 +16,9 @@ A sample test is shown here:
 
 ![screenshot](documentation/python-lint1.png)
 
-
 **Correction:**
 
-![screenshot](documentation/python-lint1.png)
-
-
+![screenshot](documentation/python-lint2.png)
 
 ## Python Unit Testing
 
@@ -30,7 +27,6 @@ I conducted a series of automated tests on [posts/views.py](https://adamalive-sc
 - Result: Pass, no errors:
 
 ![screenshot](documentation/post-test.png)
-
 
  ## Bugs
  
