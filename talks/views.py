@@ -7,7 +7,7 @@ from .serializers import TalkSerializer
 class TalkList(generics.ListCreateAPIView):
     """
     List all talk events and create event if an administrator.
-    """  
+    """
     serializer_class = TalkSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Talk.objects.all()
