@@ -176,6 +176,134 @@ This project uses a PostgreSQL database at [Neon](https://neon.tech/).
 
 This project uses the [Cloudinary API](https://cloudinary.com) to store media assets online since Heroku doesn't persist this type of data.
 
+### Preparing for Deployment
+
+### JWT tokens
+The first step of deployment is setting up the JWT tokens:
+
+First install the package in the terminal window, using the command:
+
+`pip install dj-rest-auth==2.1.9`
+
+In the settings.py file add the following to the "Installed Apps" section.
+
+`'rest_framework.authtoken',`
+
+`'dj_rest_auth',
+
+Next, add the following URLs to the urlpatterns list:
+
+`path('dj-rest-auth/', include('dj_rest_auth.urls')),`
+
+In the command terminal, migrate the database just added by typing:
+
+`python manage.py migrate`
+
+Next we want to add the feature to enable the registration of users. Type the following into the terminal:
+
+`pip install 'dj-rest-auth[with_social]'`
+
+Add the following to the "Installed Apps" section in the settings.py file:
+
+`'django.contrib.sites',
+'allauth',
+'allauth.account',
+'allauth.socialaccount',
+'dj_rest_auth.registration',`
+
+Add SITE_ID value, which is placed under INSTALLED APPS List:
+
+`SITE_ID = 1`
+
+Next add the registration URLs to the urlpatterns list, as follows:
+
+`path('dj-rest-auth/registration/', include('dj_rest_auth.registration.urls')),`
+
+Finally, add JWT tokens functionality:
+
+Install the djangorestframework-simplejwt package by typing the following into the terminal command window:
+
+`pip install djangorestframework-simplejwt==5.3.1`
+
+In the env.py file, create a session authentication value (differentiates between Dev and Prod mode):
+
+`os.environ['DEV'] = '1'`
+
+In the settings.py file, use the Dev value above to differentiate between Dev and Prod Modes & add pagination which is placed under SITE_ID:
+
+`'DEFAULT_AUTHENTICATION_CLASSES': [( 
+    'rest_framework.authentication.SessionAuthentication' 
+    if 'DEV' in os.environ 
+    else 'dj_rest_auth.jwt_auth.JWTCookieAuthentication'
+)]
+}`
+
+To enable token authentication, put the following under the above step:
+
+`REST_USE_JWT = True`
+
+To ensure tokens are sent over HTTPS only, add the following:
+
+`JWT_AUTH_SECURE = True`
+
+Next, declare cookie names for the access and refresh tokens by adding:
+
+JWT_AUTH_COOKIE = 'my-app-auth'
+JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
+Now we need to add the profile_id and profile_image to fields returned when requesting logged in user’s details:
+
+Create a new serializers.py file in the api folder. Then import the following files at the top of the new serializers file and create the profile_id and profile_image fields:
+
+from dj_rest_auth.serializers import UserDetailsSerializer
+from rest_framework import serializers
+
+class CurrentUserSerializer(UserDetailsSerializer):
+    profile_id = serializers.ReadOnlyField(source='profile.id')
+    profile_image = serializers.ReadOnlyField(source='profile.image.url')
+
+    class Meta(UserDetailsSerializer.Meta):
+        fields = UserDetailsSerializer.Meta.fields + (
+            'profile_id', 'profile_image'
+        )
+In settings.py, overwrite the default USER_DETAILS_SERIALIZER, below the JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token' :
+
+REST_AUTH_SERIALIZERS = {'USER_DETAILS_SERIALIZER': 'drf_api.serializers.CurrentUserSerializer'}
+Next, in the terminal command window:
+
+1: Run migrations
+
+  python manage.py migrate
+2: Update the requirements text file:
+
+  pip freeze > requirements.txt
+3: git add, commit and push.
+
+Bug Fix - dj-rest-auth doesn’t allow users to log out:
+
+In drf_api/views.py, import JWT_AUTH settings from settings.py
+
+from .settings import (
+JWT_AUTH_COOKIE, JWT_AUTH_REFRESH_COOKIE, JWT_AUTH_SAMESITE,
+JWT_AUTH_SECURE,
+)
+Write a logout view. It can be found here
+
+Import the logout view in drf_api/urls.py
+
+from .views import root_route, logout_route
+
+Include it in the urlpatterns list, above the default dj-rest-auth urls, so that it is matched first.
+
+urlpatterns = [
+    path('', root_route),
+    path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls')),
+    path('dj-rest-auth/logout/', logout_route),
+    path('dj-rest-auth/', include('dj_rest_auth.urls')),
+    ...
+]
+Push your code to GitHub.
+
 ### Heroku Deployment
 
 This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
