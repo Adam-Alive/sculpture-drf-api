@@ -47,7 +47,7 @@ if 'DEV' not in os.environ:
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 if 'DEV' in os.environ:
-     DATABASES = {
+    DATABASES = {
          'default': {
              'ENGINE': 'django.db.backends.sqlite3',
              'NAME': BASE_DIR / 'db.sqlite3',
@@ -77,12 +77,12 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['8000-adamalive-sculpturedrfa-aw4zyb1un53.ws.codeinstitute-ide.net',                
-                '.herokuapp.com', 'sculpture-drf-api-2aa8ed66624d.herokuapp.com'
+ALLOWED_HOSTS = ['8000-adamalive-sculpturedrfa-aw4zyb1un53.ws.codeinstitute-ide.net',  # noqa
+                  '.herokuapp.com', 'sculpture-drf-api-2aa8ed66624d.herokuapp.com'  # noqa
                 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-adamalive-sculpturedrfa-aw4zyb1un53.ws.codeinstitute-ide.net",
+    "https://8000-adamalive-sculpturedrfa-aw4zyb1un53.ws.codeinstitute-ide.net",  # noqa
     "https://*.herokuapp.com"
 ]
 
@@ -134,7 +134,7 @@ if "CLIENT_ORIGIN" in os.environ:
     CORS_ALLOWED_ORIGINS = [os.environ.get("CLIENT_ORIGIN")]
 
 if "CLIENT_ORIGIN_DEV" in os.environ:
-    CORS_ALLOWED_ORIGIN_REGEXES = [r"^https://.*\.codeinstitute-ide\.net$",]
+    CORS_ALLOWED_ORIGIN_REGEXES = [r"^https://.*\.codeinstitute-ide\.net$", ]
 
 CORS_ALLOW_CREDENTIALS = True
 
@@ -163,16 +163,16 @@ WSGI_APPLICATION = 'drf_api.wsgi.application'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',  # noqa
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',  # noqa
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',  # noqa
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',  # noqa
     },
 ]
 
