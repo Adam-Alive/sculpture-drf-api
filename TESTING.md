@@ -28,7 +28,50 @@ I conducted a series of automated tests on [posts/views.py](https://adamalive-sc
 
 ![screenshot](documentation/post-test.png)
 
- ## Bugs
+## Testing URLs
+
+By accessing the API at [sculpture-drf-api](https://sculpture-drf-api-2aa8ed66624d.herokuapp.com/) and entering the URLs in the address bar, I was able to test the integrity of each and view the relevant data elements.
+
+For example, the root url renders the following, which passes:
+
+![screenshot](documentation/root.png)
+
+Similarly, the /posts/ url renders all posts and /posts/:id/ an individual post, so both pass:
+
+![screenshot](documentation/posts.png)
+![screenshot](documentation/post.png)
+
+Results for all URLs are summarised below:
+
+| URL | Result |
+| --- | --- |
+|root  | pass |
+|/admin/  | pass  |
+| /bookings/ | pass |
+| /bookings/:id/ |  pass |
+| /comments/ |  pass |
+| /comments/:id/ | pass |
+| /followers/ | pass  |
+|  /followers/:id/| pass  |
+| /likes/ | pass |
+|  /likes/:id/| pass |
+|  /posts/| pass |
+| /posts/:id/ | pass |
+| /profiles/ |  pass |
+|  /profiles/:id/ | pass  |
+| /talks/ | pass  |
+| talks/:id/ | pass |
+| | |
+
+
+
+
+
+
+
+
+
+## Bugs
  
  - **Issue:** Fa
   
